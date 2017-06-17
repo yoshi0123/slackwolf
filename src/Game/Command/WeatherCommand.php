@@ -34,7 +34,7 @@ class WeatherCommand extends Command
 
           // Cloudy
           else if($weather == 2){
-            $this->gameManager->sendMessageToChannel($this->game, ":cloud: The cloud embrace the sky and cover the sun letting only a few glimmer of light");   
+            $this->gameManager->sendMessageToChannel($this->game, ":cloud: 空一面を雲たちが覆い僅かな光が差し込むだけだ、それはまるで私達の光を打ち消すかのように。");   
           }
 
           // Sunny
