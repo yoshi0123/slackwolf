@@ -41,7 +41,7 @@ class KillCommand extends Command
         if (count($this->args) < 2) {
             $client->getChannelGroupOrDMByID($this->channel)
                    ->then(function (ChannelInterface $channel) use ($client) {
-                       $client->send(":warning: Invalid command. Usage: !kill #channel @user", $channel);
+                       $client->send(":warning: コマンドの使い方が間違っています。使い方: !kill #channel @user", $channel);
                    });
             throw new InvalidArgumentException("Not enough arguments");
         }
