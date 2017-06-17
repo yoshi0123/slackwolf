@@ -29,7 +29,7 @@ class WeatherCommand extends Command
         if ($weather != null){
 
           if($weather == 1){
-            $this->gameManager->sendMessageToChannel($this->game, ":rain_cloud: It is raining. It is a cold rain, and the freezing drops chill you to the bone." );          
+            $this->gameManager->sendMessageToChannel($this->game, ":rain_cloud: しとしとと雨が降り注ぐ。冷やかな雨はあなたの体までも冷やしていくようだ。" );          
           }
 
           // Cloudy
