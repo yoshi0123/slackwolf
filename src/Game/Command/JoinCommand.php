@@ -56,7 +56,7 @@ class JoinCommand extends Command
                     if ($user->getId() == $this->userId) {
                         if ($this->game->addLobbyPlayer($user)) {
                             $playersList = PlayerListFormatter::format($this->game->getLobbyPlayers());
-                            $this->gameManager->sendMessageToChannel($this->game, "Current lobby: " . $playersList);
+                            $this->gameManager->sendMessageToChannel($this->game, "現在ロビーにいるプレーヤー: " . $playersList);
                         } else {
                             $this->gameManager->sendMessageToChannel($this->game, "You've already joined, " . $user->getFirstName() . ". Stop trying to spam everyone.");
                         }

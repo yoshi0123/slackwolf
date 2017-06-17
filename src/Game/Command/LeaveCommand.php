@@ -47,7 +47,7 @@ class LeaveCommand extends Command
         $playersList = PlayerListFormatter::format($this->game->getLobbyPlayers());
 
         if ($playersList) {
-            $this->gameManager->sendMessageToChannel($this->game, "Current lobby: " . $playersList);
+            $this->gameManager->sendMessageToChannel($this->game, "現在ロビーにいるプレーヤー: " . $playersList);
         } else {
             $this->gameManager->sendMessageToChannel($this->game, "Lobby is now empty");
         }
