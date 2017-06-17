@@ -62,7 +62,7 @@ class Role
 	}
 
     const VILLAGER = "村人";
-    const SEER = "預言者";
+    const SEER = "占い師";
     const WEREWOLF = "人狼";
 
     const BEHOLDER = "監視者";
