@@ -61,17 +61,17 @@ class Role
 		return $roleName == $this->getName();
 	}
 
-    const VILLAGER = "Villager";
-    const SEER = "Seer";
-    const WEREWOLF = "Werewolf";
+    const VILLAGER = "村人";
+    const SEER = "預言者";
+    const WEREWOLF = "人狼";
 
-    const BEHOLDER = "Beholder";
-    const BODYGUARD = "Bodyguard";
-    const HUNTER = "Hunter";
-    const LYCAN = "Lycan";
-    const TANNER = "Tanner";
-    const WITCH = "Witch";
-    const WOLFMAN = "Wolf Man";
+    const BEHOLDER = "監視者";
+    const BODYGUARD = "ボディーガード";
+    const HUNTER = "ハンター";
+    const LYCAN = "狼人間";
+    const TANNER = "皮なめし職人";
+    const WITCH = "魔女";
+    const WOLFMAN = "人狼太郎";
 
     public static function getSpecialRoles() {
     	return [

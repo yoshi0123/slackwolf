@@ -411,7 +411,7 @@ class GameManager
                 if ($player->role->isRole(Role::HUNTER)) {
                     $game->setHunterNeedsToShoot(true);
                     $hunterMsg .= ":bow_and_arrow: " . $player->getUsername() .
-                        " as hunter you may shoot one person.  Type !shoot @playername, or !shoot noone.";
+                        " は最後に一人を道連れにすることができます。 道連れにする場合は`!shoot @プレーヤーの名前`を、, 誰も道連れにしない場合は`!shoot noone`を発言してください。";
                 }
             }
 
