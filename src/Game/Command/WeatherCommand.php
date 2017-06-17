@@ -39,13 +39,13 @@ class WeatherCommand extends Command
 
           // Sunny
           else{
-            $this->gameManager->sendMessageToChannel($this->game, ":sunny: The warm sun is shining. Its brightness almost blinds you. You take a moment to appreciate its embrace."); 
+            $this->gameManager->sendMessageToChannel($this->game, ":sunny: 暖かな太陽。その目が眩むほどの光に包まれた私は自分がまだ生きているということに心から感謝した。"); 
           }
-          
+
         }
 
         else{
-          $this->gameManager->sendMessageToChannel($this->game,"No Game Running"); 
+          $this->gameManager->sendMessageToChannel($this->game,"ゲーム中ではありません"); 
         }
     }
 }
