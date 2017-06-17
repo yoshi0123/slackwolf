@@ -32,15 +32,15 @@ class GuardCommand extends Command
         $client = $this->client;
 
         if ($this->channel[0] != 'D') {
-            throw new Exception("You may only !guard privately.");
+            throw new Exception("!guardはダイレクトメッセージでのみ利用できます。");
         }
 
         if (count($this->args) < 2) {
             $client->getChannelGroupOrDMByID($this->channel)
                    ->then(function (ChannelInterface $channel) use ($client) {
-                       $client->send(":warning: Invalid command. Usage: !guard #channel @user", $channel);
+                       $client->send(":warning: コマンドの使い方が間違っています。正しい使い方: !guard #ゲームが進行しているチャンネル @守る対象のプレーヤー名", $channel);
                    });
-            throw new InvalidArgumentException("Not enough arguments");
+            throw new InvalidArgumentException("引数が おかしい");
         }
 
         $client = $this->client;
@@ -97,9 +97,9 @@ class GuardCommand extends Command
         if ( ! $this->game) {
             $client->getChannelGroupOrDMByID($this->channel)
                    ->then(function (ChannelInterface $channel) use ($client) {
-                       $client->send(":warning: No game in progress.", $channel);
+                       $client->send(":warning: 現在ゲーム中ではありません。", $channel);
                    });
-            throw new Exception("No game in progress.");
+            throw new Exception("現在ゲーム中ではありません。");
         }
 
         $this->args[1] = UserIdFormatter::format($this->args[1], $this->game->getOriginalPlayers());

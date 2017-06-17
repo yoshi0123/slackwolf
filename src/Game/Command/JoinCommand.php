@@ -30,7 +30,7 @@ class JoinCommand extends Command
         }
 
         if ( ! $this->game) {
-            throw new Exception("No game in progress.");
+            throw new Exception("現在ゲーム中ではありません。");
         }
         
         if ($this->game->getState() != GameState::LOBBY) { 

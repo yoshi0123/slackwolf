@@ -35,7 +35,7 @@ class PoisonCommand extends Command
         $client = $this->client;
 
         if ($this->channel[0] != 'D') {
-            throw new Exception("You may only !poison privately.");
+            throw new Exception("!poisonはダイレクトメッセージでのみ利用できます。");
         }
 
         if (count($this->args) < 2) {
@@ -99,9 +99,9 @@ class PoisonCommand extends Command
         if ( ! $this->game) {
             $client->getChannelGroupOrDMByID($this->channel)
                    ->then(function (ChannelInterface $channel) use ($client) {
-                       $client->send(":warning: No game in progress.", $channel);
+                       $client->send(":warning: 現在ゲーム中ではありません。", $channel);
                    });
-            throw new Exception("No game in progress.");
+            throw new Exception("現在ゲーム中ではありません。");
         }
 
         $this->args[1] = UserIdFormatter::format($this->args[1], $this->game->getOriginalPlayers());

@@ -35,7 +35,7 @@ class ShootCommand extends Command
         $client = $this->client;
 
         if ( ! $this->game) {
-            throw new Exception("No game in progress.");
+            throw new Exception("現在ゲーム中ではありません。");
         }
 
         if (!$this->game->hunterNeedsToShoot) {
